@@ -1,0 +1,9 @@
+sheet_terrain_objects: 0:0
+tl: dust_tl:nr_black
+tr: dust_tr:nr_black
+bl: dust_bl:nr_black
+br: dust_br:nr_black
+t: dust_t:nr_black
+b: dust_b:nr_black
+l: dust_l:nr_black
+r: dust_r:nr_black

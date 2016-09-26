@@ -1,0 +1,14 @@
+shadow1 0,0
+shadow2 0,1
+man11 1,0
+man12 1,1
+man21 2,0
+man22 2,1
+man31 3,0
+man32 3,1
+man41 4,0
+man42 4,1
+man51 5,0
+man52 5,1
+man61 6,0
+man62 6,1

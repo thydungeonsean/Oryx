@@ -1,0 +1,56 @@
+
+<<< kobold scout
+name: kobold
+image: kobold
+color: red
+health: 1
+attack: 1
+dodge: 1
+health_quality: frail
+attack_quality: weak
+>>>
+
+<<< kobold grunt
+name: kobold grunt
+image: kobold
+color: dp_red
+health: 2
+attack: 1
+dodge: 2
+health_quality: frail
+attack_quality: trained
+>>>
+
+<<< kobold archer
+name: kobold archer
+image: kobold_archer
+color: dp_red
+health: 1
+attack: 1
+dodge: 2
+health_quality: good
+attack_quality: weak
+>>>
+
+<<< kobold shaman
+name: kobold shaman
+image: kobold_mystic
+color: violet
+health: 1
+attack: 1
+dodge: 2
+health_quality: frail
+attack_quality: weak
+>>>
+
+<<< kobold minion
+name: kobold minion
+image: kobold
+color: lt_red
+health: 0
+attack: 0
+dodge: 1
+health_quality: frail
+attack_quality: weak
+base_health: 1
+>>>

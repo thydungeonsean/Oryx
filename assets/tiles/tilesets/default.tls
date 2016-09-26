@@ -1,0 +1,16 @@
+floor:
+var_floor:
+hor_wall:
+ver_wall:
+var_hor_wall:
+var_ver_wall:
+hor_window:
+ver_window:
+hor_break:
+ver_break:
+east_break:
+west_break:
+south_break:
+north_break:
+hor_spur:
+ver_spur:

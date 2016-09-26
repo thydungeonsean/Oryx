@@ -1,0 +1,15 @@
+atr_base_color: bl_green
+atr_crackable: false
+col_wall: vr_dk_grey:black
+col_floor: lt_gr_green:black
+col_ground: vr_dk_grey:black
+col_door: dk_bl_green:black
+col_exit: vr_dk_grey:black
+floor: stone1:floor
+hor_wall: stone_bldg2:wall
+ver_wall: ver_bldg:wall
+filled: spots3:ground
+hor_filled: ver_bldg:wall
+close_door: door_c_5:door
+open_door: door_o_5:door
+entrance: stair_door_1:exit
