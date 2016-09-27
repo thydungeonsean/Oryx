@@ -123,7 +123,7 @@ def demo():
     # m = RuralMap(loading_screen=(True, screen))
     # m = CaveMap(loading_screen = (True, screen))
     # m = DungeonMap(loading_screen=(True, screen))
-    m = WorldMap(loading_screen=(True, screen))
+    m = WorldMap(w=100, h=60, loading_screen=(True, screen))
     print m.seed
     v = View(m)
     c = Control(v)

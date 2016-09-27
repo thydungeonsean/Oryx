@@ -78,9 +78,10 @@ class WorldMap(Map):
         self.flood_fill_add_tiles((0, 0), 'holder', 'water')
 
         self.advance_loading(.5, 'forming continents')
-        self.form_continents()
+        self.form_continents()  # TODO make diagonal only connections of continents illegal
 
         self.add_mountain_ranges()
+        self.add_hills()
 
         self.advance_loading(.7, 'adding forest')
         self.add_forest()
@@ -439,6 +440,10 @@ class WorldMap(Map):
         
         for mass in self.landmass_list:
             mass.generate_mountains(spine)
+
+    def add_hills(self):
+        pass
+
 
 def get_forest((w, h), seed):
 
