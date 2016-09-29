@@ -98,10 +98,8 @@ class Continent(object):
             elif mountain_type == 'barrier':
                 number_placed += self.place_barrier(height_map, range_of_heights)
             elif mountain_type == 'range':
-                pass
                 number_placed += self.place_range(height_map, range_of_heights)
             elif mountain_type == 'coastal':
-                pass
                 number_placed += self.place_range(height_map, range_of_heights, level=1)
                 
     def place_peaks(self, height_map, height_ranges):

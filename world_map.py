@@ -81,6 +81,7 @@ class WorldMap(Map):
         self.form_continents()  # TODO make diagonal only connections of continents illegal
 
         self.add_mountain_ranges()
+        self.add_rivers()
         self.add_hills()
 
         self.advance_loading(.7, 'adding forest')
@@ -349,13 +350,13 @@ class WorldMap(Map):
         # water flood filled as a surrounding ocean, and holder tiles in any gaps that ocean
         # flood fill didn't reach - landlocked empty space.
         unclaimed_ground = self.find_ground()  
-        id = 0
+        _id = 0
 
         while unclaimed_ground:
 
-            id += 1
+            _id += 1
             # Continent dict has 'id'= id#, 'points'= list of tiles, 'size'=num of tiles
-            mass = {'id': id, 'points': []}
+            mass = {'id': _id, 'points': []}
             start_point = choice(unclaimed_ground)
 
             continent_points = self.flood_continent(start_point)
@@ -366,24 +367,26 @@ class WorldMap(Map):
                 except ValueError:
                     pass
                 mass['points'].append(point)
-                mass_map[point] = id
+                mass_map[point] = _id
 
             mass['size'] = len(mass['points'])
-            masses[id] = mass
+            masses[_id] = mass
 
         c, i, d = self.sort_continents_islands_depths(masses)
 
-        for id in c:
-            new = Continent(self, masses[id])
-            self.continents[id] = new
+        for _id in c:
+            new = Continent(self, masses[_id])
+            self.continents[_id] = new
             self.landmass_list.append(new)
 
-        for id in i:
-            self.islands[id] = masses[id]
+        for _id in i:
+            self.islands[_id] = masses[_id]
 
-        for id in d:
-            depth = masses[id]['points']
-            self.add_tiles(depth, 'depth')
+        for _id in d:
+            depth = masses[_id]['points']
+            self.add_tiles(depth, 'water')
+
+        self.clean_continent_edges()
 
     def sort_continents_islands_depths(self, masses):
 
@@ -424,6 +427,32 @@ class WorldMap(Map):
 
         return c_ids, i_ids, d_ids
 
+    def clean_continent_edges(self):
+
+        shore = self.get_shoreline().keys()
+
+        diagonal_connections = []
+        d_value = {
+            'n': 0,
+            'ne': 1,
+            'e': 2,
+            'se': 3,
+            's': 4,
+            'sw': 5,
+            'w': 6,
+            'nw': 7
+        }
+
+        for point in shore:
+
+            adj = self.get_adj_tile_dict(point, diag=True)
+            point_profile = {}
+            for d in adj['directions']:
+                if adj[d] == 'water':
+                    point_profile[d_value[d]] = False
+                elif adj[d] == 'ground':
+                    point_profile[d_value[d]] = True
+
     def add_forest(self):
 
         forest = get_forest((self.xlim, self.ylim), self.forest_seed)
@@ -440,6 +469,10 @@ class WorldMap(Map):
         
         for mass in self.landmass_list:
             mass.generate_mountains(spine)
+
+    def add_rivers(self):
+
+        pass
 
     def add_hills(self):
         pass
