@@ -11,7 +11,6 @@ from continent import Continent
 
 
 class WorldMap(Map):
-
     def __init__(self, w=100, h=50, sd=randint(0, 9999999), default='holder', loading_screen=(False, None)):
 
         Map.__init__(self, w, h, sd, default, loading_screen=loading_screen)
@@ -78,7 +77,7 @@ class WorldMap(Map):
         self.flood_fill_add_tiles((0, 0), 'holder', 'water')
 
         self.advance_loading(.5, 'forming continents')
-        self.form_continents()  # TODO make diagonal only connections of continents illegal
+        self.form_continents()
 
         self.add_mountain_ranges()
         self.add_rivers()
@@ -155,7 +154,6 @@ class WorldMap(Map):
 
                 # draw permanent terrain features
                 if self.feature_map and (x, y) in self.feature_map.terrain_tile_features.keys():
-
                     t = self.feature_map.terrain_tile_features[(x, y)]
                     tile = self.get_tile_image(t)
                     tile.position((x_pos, y_pos))
@@ -166,13 +164,13 @@ class WorldMap(Map):
 
         if self.feature_map:
             pass
-                    
+
         # draw shoreline around continents
         for x, y in self.shore_dict.keys():
-            
+
             y_pos = y * TILEHEIGHT
             x_pos = x * TILEWIDTH
-            
+
             for tile_key in self.shore_dict[(x, y)]:
                 tile = self.shore_tiles.get_tile(tile_key)
                 tile.position((x_pos, y_pos))
@@ -247,9 +245,9 @@ class WorldMap(Map):
         return shoreline
 
     def set_shoreline(self):
-        
+
         shoreline = self.get_shoreline()
-                            
+
         for tile in shoreline.keys():
             shore = shoreline[tile]
             if 't' in shore:
@@ -262,55 +260,54 @@ class WorldMap(Map):
                     shore.append('br')
                 if 'l' in shore:
                     shore.append('bl')
-                    
+
         return shoreline
-        
+
     # continent functions
     def flood_fill_add_tiles(self, start, replaced_type, replacer_type):
-                
+
         replace = [start]
         self.add_tile(start, replacer_type)
         while replace:
-            
+
             replace = self.get_neighbors_flood(replace, replaced_type)
             for tile in replace:
                 self.add_tile(tile, replacer_type)
-                
+
     def get_neighbors_flood(self, replace, replaced_type):
-        
+
         new_points = {}
-        
+
         for tile in replace:
             adj = self.get_adj_tile_dict(tile)
 
             for d in adj['directions']:
                 if adj[d] == replaced_type:
                     new_points[adj['%s_coord' % d]] = None
-                    
+
         return new_points.keys()
 
     def flood_continent(self, (x, y)):
-        
+
         # Starts from an unclaimed ground point. Flood fills all reachable ground from that point
         # and adds it to a continent dict. If it finds a holder tile it will start a nested flood
         # fill to turn the holder into mountains
-        
+
         continent_points = {(x, y): None}
-        
+
         queue = [(x, y)]
-        
+
         while queue:
-            
             queue = self.flood_id_continent(queue, continent_points)
-        
+
         final_points = continent_points.keys()
-        
+
         return final_points
 
     def flood_id_continent(self, queue, continent_points):
-        
+
         new_queue = []
-        
+
         for point in queue:
             adj = self.get_adj_tile_dict(point)
             for d in adj['directions']:
@@ -324,9 +321,9 @@ class WorldMap(Map):
                         new_queue.append(coord)
                 elif tile_type == 'holder':  # if find a holder block, flood fill it with mountains
                     self.flood_fill_add_tiles(coord, 'holder', 'ground')
-                    
+
         return new_queue
-                    
+
     def find_ground(self):
 
         ground = []
@@ -349,7 +346,7 @@ class WorldMap(Map):
         # get all ground tiles on map. Currently map is ground made from cellular automata,
         # water flood filled as a surrounding ocean, and holder tiles in any gaps that ocean
         # flood fill didn't reach - landlocked empty space.
-        unclaimed_ground = self.find_ground()  
+        unclaimed_ground = self.find_ground()
         _id = 0
 
         while unclaimed_ground:
@@ -386,7 +383,8 @@ class WorldMap(Map):
             depth = masses[_id]['points']
             self.add_tiles(depth, 'water')
 
-        self.clean_continent_edges()
+        self.remove_diagonals('water', 'ground')
+        self.adjust_continents()
 
     def sort_continents_islands_depths(self, masses):
 
@@ -408,7 +406,7 @@ class WorldMap(Map):
         for k, v in continents:
             c_ids.append(k)
 
-        islands_depths = ordered[self.num_continents+1:]
+        islands_depths = ordered[self.num_continents + 1:]
 
         i = self.num_islands
         if i > len(islands_depths):
@@ -427,31 +425,21 @@ class WorldMap(Map):
 
         return c_ids, i_ids, d_ids
 
-    def clean_continent_edges(self):
+    def adjust_continents(self):
 
-        shore = self.get_shoreline().keys()
+        # reset the tile lists of continents after diagonals removed
+        for continent in self.continents.values():
+            for x, y in continent.points:
+                if self.map[x][y] != 'ground':
+                    continent.points.remove((x, y))
+                    continent.size -= 1
 
-        diagonal_connections = 'poo'
-        d_value = {
-            'n': 0,
-            'ne': 1,
-            'e': 2,
-            'se': 3,
-            's': 4,
-            'sw': 5,
-            'w': 6,
-            'nw': 7
-        }
+        for island in self.islands.values():
+            for x, y in island['points']:
+                if self.map[x][y] != 'ground':
+                    island['points'].remove((x, y))
+                    island['size'] -= 1
 
-        for point in shore:
-
-            adj = self.get_adj_tile_dict(point, diag=True)
-            point_profile = {}
-            for d in adj['directions']:
-                if adj[d] == 'water':
-                    point_profile[d_value[d]] = False
-                elif adj[d] == 'ground':
-                    point_profile[d_value[d]] = True
 
     def add_forest(self):
 
@@ -466,7 +454,7 @@ class WorldMap(Map):
     def add_mountain_ranges(self):
 
         spine = Spine(self)
-        
+
         for mass in self.landmass_list:
             mass.generate_mountains(spine)
 
@@ -479,7 +467,6 @@ class WorldMap(Map):
 
 
 def get_forest((w, h), seed):
-
     auto = ca.CellularAutomaton((w, h), seed, 40, 1, 4, 3)
     auto.generate_cellular_automaton()
 
@@ -490,3 +477,4 @@ def get_forest((w, h), seed):
             forest.append(point)
 
     return forest
+
