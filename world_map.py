@@ -431,7 +431,7 @@ class WorldMap(Map):
 
         shore = self.get_shoreline().keys()
 
-        diagonal_connections = []
+        diagonal_connections = 'poo'
         d_value = {
             'n': 0,
             'ne': 1,
