@@ -323,6 +323,8 @@ class Map(object):
 
         pass
 
+        
+    # loading bar
     def clear_screen(self):
         if self.bar.on:
 
@@ -334,6 +336,45 @@ class Map(object):
             self.screen.fill(BLACK)
             self.bar.draw(percent, message)
             pygame.display.update()
+            
+    # clean up methods
+    # remove diagonal only connections
+    def remove_diagonals(self, blank_tile, check_tile):
+        
+        for y in range(self.ylim-1):
+            for x in range(self.xlim-1):
+                
+                self.check_quad((x, y))
+                
+    def check_quad(self, (x, y), blank_tile, check_tile):
+        
+        points = (
+                  ((x, y), (x+1, y)),
+                  ((x, y+1), (x+1, y+1))
+                 )
+        states = [[0, 0],
+                  [0, 0]
+                  ]
+        for py in range(2):
+            for px in range(2):
+                fx, fy = points[px][py]
+                if self.map[fx][fy] == check_tile:
+                    states[px][py] = 1
+                    
+        if states[0][0] == states[1][1] and states[0][1] == states[1][0] and states[0][0] != states[0][1]:
+            self.fix_quad(points, states, blank_tile)
+                
+    def fix_quad(self, points, states, blank_tile):
+        
+        if states[0][0] == 1:
+            walls = ((0, 0), (1, 1))
+        else:
+            walls = ((0, 1), (1, 0))
+
+        x, y = walls[randint(0, 1)]
+        change_point = points[x][y]
+        
+        self.add_tile(change_point, blank_tile)    
 
 
 class LoadingBar(object):
@@ -372,3 +413,4 @@ class LoadingBar(object):
         fr.topleft = (x, self.font_y)
 
         self.screen.blit(fi, fr)
+

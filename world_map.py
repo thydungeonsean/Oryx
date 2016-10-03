@@ -78,7 +78,7 @@ class WorldMap(Map):
         self.flood_fill_add_tiles((0, 0), 'holder', 'water')
 
         self.advance_loading(.5, 'forming continents')
-        self.form_continents()  # TODO make diagonal only connections of continents illegal
+        self.form_continents()
 
         self.add_mountain_ranges()
         self.add_rivers()
@@ -386,7 +386,9 @@ class WorldMap(Map):
             depth = masses[_id]['points']
             self.add_tiles(depth, 'water')
 
-        self.clean_continent_edges()
+        self.remove_diagonals('water', 'ground')
+        self.adjust_continents()
+        
 
     def sort_continents_islands_depths(self, masses):
 
@@ -427,32 +429,9 @@ class WorldMap(Map):
 
         return c_ids, i_ids, d_ids
 
-    def clean_continent_edges(self):
-
-        shore = self.get_shoreline().keys()
-
-        diagonal_connections = []
-        d_value = {
-            'n': 0,
-            'ne': 1,
-            'e': 2,
-            'se': 3,
-            's': 4,
-            'sw': 5,
-            'w': 6,
-            'nw': 7
-        }
-
-        for point in shore:
-
-            adj = self.get_adj_tile_dict(point, diag=True)
-            point_profile = {}
-            for d in adj['directions']:
-                if adj[d] == 'water':
-                    point_profile[d_value[d]] = False
-                elif adj[d] == 'ground':
-                    point_profile[d_value[d]] = True
-
+    def adjust_continents(self):
+        pass  # reset the tile lists of continents after diagonals removed
+        
     def add_forest(self):
 
         forest = get_forest((self.xlim, self.ylim), self.forest_seed)
@@ -490,3 +469,4 @@ def get_forest((w, h), seed):
             forest.append(point)
 
     return forest
+

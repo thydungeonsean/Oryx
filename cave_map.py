@@ -53,7 +53,7 @@ class CaveMap(Map):
         self.load_automaton()
 
         self.advance_loading(.45, 'connecting caves')
-        self.remove_diagonals()
+        self.remove_diagonals('floor', 'filled')
         self.flood_connect_cavern()
 
         self.advance_loading(.5, 'adding walls')
@@ -331,41 +331,3 @@ class CaveMap(Map):
 
         for p in trace:
             self.add_tile(p, 'floor')
-    
-    # remove diagonal only connections
-    def remove_diagonals(self):
-        
-        for y in range(self.ylim-1):
-            for x in range(self.xlim-1):
-                
-                self.check_quad((x, y))
-                
-    def check_quad(self, (x, y)):
-        
-        points = (
-                  ((x, y), (x+1, y)),
-                  ((x, y+1), (x+1, y+1))
-                 )
-        states = [[0, 0],
-                  [0, 0]
-                  ]
-        for py in range(2):
-            for px in range(2):
-                fx, fy = points[px][py]
-                if self.map[fx][fy] == 'filled':
-                    states[px][py] = 1
-                    
-        if states[0][0] == states[1][1] and states[0][1] == states[1][0] and states[0][0] != states[0][1]:
-            self.fix_quad(points, states)
-                
-    def fix_quad(self, points, states):
-        
-        if states[0][0] == 1:
-            walls = ((0, 0), (1, 1))
-        else:
-            walls = ((0, 1), (1, 0))
-
-        x, y = walls[randint(0, 1)]
-        change_point = points[x][y]
-        
-        self.add_tile(change_point, 'floor')     
