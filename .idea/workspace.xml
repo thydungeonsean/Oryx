@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e402858-6a04-4380-80e1-d0adff230eab" name="Default" comment="">
+    <list default="true" id="2e402858-6a04-4380-80e1-d0adff230eab" name="Default" comment="testing pycharm git integration">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cave_map.py" afterPath="$PROJECT_DIR$/cave_map.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map.py" afterPath="$PROJECT_DIR$/map.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map.txt" afterPath="$PROJECT_DIR$/map.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/world_map.py" afterPath="$PROJECT_DIR$/world_map.py" />
+>>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
     </list>
     <ignored path="Oryx.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,73 +29,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="world_map.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/world_map.py">
+      <file leaf-file-name="continent.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/continent.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="67">
               <caret line="448" column="30" selection-start-line="448" selection-start-column="30" selection-end-line="448" selection-end-column="30" />
+=======
+            <state relative-caret-position="1139">
+              <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+>>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
               <folding>
-                <element signature="e#2120#2198#0" expanded="false" />
-                <element signature="e#3053#3185#0" expanded="false" />
-                <element signature="e#3107#3185#0" expanded="false" />
-                <element signature="e#3229#3380#0" expanded="false" />
-                <element signature="e#3424#3568#0" expanded="false" />
-                <element signature="e#3608#5817#0" expanded="false" />
-                <element signature="e#4605#4860#0" expanded="false" />
-                <element signature="e#5030#5258#0" expanded="false" />
-                <element signature="e#5486#5783#0" expanded="false" />
-                <element signature="e#5625#5783#0" expanded="false" />
-                <element signature="e#5879#6897#0" expanded="false" />
-                <element signature="e#6061#6222#0" expanded="false" />
-                <element signature="e#6327#6488#0" expanded="false" />
-                <element signature="e#6590#6875#0" expanded="false" />
-                <element signature="e#6717#6875#0" expanded="false" />
-                <element signature="e#8343#8595#0" expanded="false" />
-                <element signature="e#8453#8595#0" expanded="false" />
-                <element signature="e#8689#8987#0" expanded="false" />
-                <element signature="e#8755#8933#0" expanded="false" />
-                <element signature="e#8847#8933#0" expanded="false" />
-                <element signature="e#9045#9571#0" expanded="false" />
-                <element signature="e#9045#9134#0" expanded="false" />
-                <element signature="e#9649#10453#0" expanded="false" />
-                <element signature="e#9713#10407#0" expanded="false" />
-                <element signature="e#9805#10407#0" expanded="false" />
-                <element signature="e#9999#10234#0" expanded="false" />
-                <element signature="e#10156#10234#0" expanded="false" />
-                <element signature="e#10511#10709#0" expanded="false" />
-                <element signature="e#10571#10686#0" expanded="false" />
-                <element signature="e#10614#10686#0" expanded="false" />
-                <element signature="e#12437#13313#0" expanded="false" />
-                <element signature="e#12494#12586#0" expanded="false" />
-                <element signature="e#13220#13277#0" expanded="false" />
-                <element signature="e#14007#14197#0" expanded="false" />
-                <element signature="e#14488#14717#0" expanded="false" />
-                <element signature="e#14644#14698#0" expanded="false" />
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="map.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/map.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="2108">
               <caret line="140" column="23" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
               <folding>
                 <element signature="e#3256#3598#0" expanded="false" />
                 <element signature="e#3791#6870#0" expanded="false" />
               </folding>
+=======
+            <state relative-caret-position="407">
+              <caret line="366" column="35" selection-start-line="366" selection-start-column="35" selection-end-line="366" selection-end-column="35" />
+              <folding />
+>>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="continent.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/continent.py">
+      <file leaf-file-name="world_map.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/world_map.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1122">
               <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+=======
+            <state relative-caret-position="458">
+              <caret line="434" column="39" selection-start-line="434" selection-start-column="39" selection-end-line="434" selection-end-column="39" />
+>>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#2119#2197#0" expanded="false" />
+                <element signature="e#12112#12990#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -155,8 +144,6 @@
         <option value="$PROJECT_DIR$/feature.py" />
         <option value="$PROJECT_DIR$/feature_map.py" />
         <option value="$PROJECT_DIR$/player.py" />
-        <option value="$PROJECT_DIR$/cave_map.py" />
-        <option value="$PROJECT_DIR$/map.py" />
         <option value="$PROJECT_DIR$/main_display.py" />
         <option value="$PROJECT_DIR$/game_state.py" />
         <option value="$PROJECT_DIR$/cellular_automaton.py" />
@@ -172,7 +159,9 @@
         <option value="$PROJECT_DIR$/constants.py" />
         <option value="$PROJECT_DIR$/map_demo.py" />
         <option value="$PROJECT_DIR$/continent.py" />
+        <option value="$PROJECT_DIR$/cave_map.py" />
         <option value="$PROJECT_DIR$/world_map.py" />
+        <option value="$PROJECT_DIR$/map.py" />
       </list>
     </option>
   </component>
@@ -211,7 +200,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dijkstra_map.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/map.py" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -476,12 +465,21 @@
       <option name="project" value="LOCAL" />
       <updated>1474936786231</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00002" summary="working on world map">
       <created>1475151193427</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
       <updated>1475151193427</updated>
+=======
+    <task id="LOCAL-00002" summary="testing pycharm git integration">
+      <created>1475188858832</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1475188858832</updated>
+>>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -492,9 +490,13 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24925816" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="36" y="16" width="1097" height="600" />
+>>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -522,7 +524,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working on world map" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on world map" />
+    <MESSAGE value="testing pycharm git integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing pycharm git integration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -532,11 +535,16 @@
           <line>63</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/map.py</url>
+          <line>405</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="56" />
+      <option name="time" value="57" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -688,13 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cave_map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="348" column="25" selection-start-line="348" selection-start-column="25" selection-end-line="348" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -874,6 +875,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="559">
           <caret line="97" column="37" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="37" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -884,6 +886,8 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
+=======
+>>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
         </state>
       </provider>
     </entry>
@@ -903,59 +907,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map.py">
+    <entry file="file://$PROJECT_DIR$/cave_map.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="313" column="0" selection-start-line="313" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/continent.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2108">
           <caret line="140" column="23" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
+=======
+        <state relative-caret-position="1139">
+          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+>>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
           <folding>
-            <element signature="e#3256#3598#0" expanded="false" />
-            <element signature="e#3791#6870#0" expanded="false" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/world_map.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="67">
           <caret line="448" column="30" selection-start-line="448" selection-start-column="30" selection-end-line="448" selection-end-column="30" />
+=======
+        <state relative-caret-position="458">
+          <caret line="434" column="39" selection-start-line="434" selection-start-column="39" selection-end-line="434" selection-end-column="39" />
+>>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
           <folding>
-            <element signature="e#2120#2198#0" expanded="false" />
-            <element signature="e#3053#3185#0" expanded="false" />
-            <element signature="e#3107#3185#0" expanded="false" />
-            <element signature="e#3229#3380#0" expanded="false" />
-            <element signature="e#3424#3568#0" expanded="false" />
-            <element signature="e#3608#5817#0" expanded="false" />
-            <element signature="e#4605#4860#0" expanded="false" />
-            <element signature="e#5030#5258#0" expanded="false" />
-            <element signature="e#5486#5783#0" expanded="false" />
-            <element signature="e#5625#5783#0" expanded="false" />
-            <element signature="e#5879#6897#0" expanded="false" />
-            <element signature="e#6061#6222#0" expanded="false" />
-            <element signature="e#6327#6488#0" expanded="false" />
-            <element signature="e#6590#6875#0" expanded="false" />
-            <element signature="e#6717#6875#0" expanded="false" />
-            <element signature="e#8343#8595#0" expanded="false" />
-            <element signature="e#8453#8595#0" expanded="false" />
-            <element signature="e#8689#8987#0" expanded="false" />
-            <element signature="e#8755#8933#0" expanded="false" />
-            <element signature="e#8847#8933#0" expanded="false" />
-            <element signature="e#9045#9571#0" expanded="false" />
-            <element signature="e#9045#9134#0" expanded="false" />
-            <element signature="e#9649#10453#0" expanded="false" />
-            <element signature="e#9713#10407#0" expanded="false" />
-            <element signature="e#9805#10407#0" expanded="false" />
-            <element signature="e#9999#10234#0" expanded="false" />
-            <element signature="e#10156#10234#0" expanded="false" />
-            <element signature="e#10511#10709#0" expanded="false" />
-            <element signature="e#10571#10686#0" expanded="false" />
-            <element signature="e#10614#10686#0" expanded="false" />
-            <element signature="e#12437#13313#0" expanded="false" />
-            <element signature="e#12494#12586#0" expanded="false" />
-            <element signature="e#13220#13277#0" expanded="false" />
-            <element signature="e#14007#14197#0" expanded="false" />
-            <element signature="e#14488#14717#0" expanded="false" />
-            <element signature="e#14644#14698#0" expanded="false" />
+            <element signature="e#2119#2197#0" expanded="false" />
+            <element signature="e#12112#12990#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="366" column="35" selection-start-line="366" selection-start-column="35" selection-end-line="366" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

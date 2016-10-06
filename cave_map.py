@@ -7,7 +7,6 @@ from decoration_map import DecorationMap
 
 
 class CaveMap(Map):
-
     def __init__(self, w=50, h=30, sd=randint(0, 9999999), loading_screen=(False, None)):
 
         Map.__init__(self, w, h, sd, loading_screen=loading_screen)
@@ -105,7 +104,7 @@ class CaveMap(Map):
 
             if wall:
                 self.add_tile(point, 'wall')
-    
+
     # connect separate caves
     def flood_connect_cavern(self):
 
@@ -125,7 +124,7 @@ class CaveMap(Map):
                 connected = True
 
     def get_cave_dictionary(self):
-    
+
         cave_dictionary = {}
 
         cave = 0
@@ -138,9 +137,9 @@ class CaveMap(Map):
             except KeyError:  # only try flood filling if it's not part of a cave already
                 cave += 1
                 self.flood_cave((x, y), cave_dictionary, cave)
-                
+
         return cave_dictionary
-    
+
     def flood_cave(self, (x, y), dict, tag):
 
         dict[(x, y)] = tag
@@ -177,10 +176,10 @@ class CaveMap(Map):
 
         points = []
 
-        d = ((x, y-1),
-             (x, y+1),
-             (x-1, y),
-             (x+1, y)
+        d = ((x, y - 1),
+             (x, y + 1),
+             (x - 1, y),
+             (x + 1, y)
              )
 
         for px, py in d:
@@ -262,7 +261,6 @@ class CaveMap(Map):
         active_points = []
 
         for point in caves[cave]:
-
             active_points.append(point)
             paths[point] = ('end', 0)
 
@@ -311,16 +309,16 @@ class CaveMap(Map):
         for px, py in d:
             if not self.point_is_on_map((px, py)):
                 continue
-            if px == 0 or py == 0 or px == self.xlim-1 or py == self.ylim-1:
+            if px == 0 or py == 0 or px == self.xlim - 1 or py == self.ylim - 1:
                 continue
 
             if self.map[px][py] == 'filled':
-                 points.append((px, py))
+                points.append((px, py))
             elif self.map[px][py] == 'floor' and inv_caves[(px, py)] != cave:
                 points.append((px, py))
 
         return points
-        
+
     def trace_connection(self, path_dict, end, cave, point_to_cave, cave_to_point):
 
         trace = []

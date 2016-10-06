@@ -8,7 +8,6 @@ import common_tiles as ct
 
 
 class Map(object):
-
     tiles_dir = {
         'dungeon': ('floor', 'corridor', 'door', 'wall', 'fixed_wall', 'filled', 'feature'),
         'rural': ('floor', 'door', 'wall', 'fixed_wall', 'ground', 'road', 'field', 'tree', 'feature'),
@@ -40,13 +39,13 @@ class Map(object):
         self.zones = []
         self.wall_image_dict = {}
         self.horizontal_walls = []
-        
+
         # should be overwritten by child classes
         self.decoration_map = False
         self.feature_map = False
         self.map_image = None
         self.map_rect = None
-        
+
         self.tileset_id = 'cavern1'
 
         if loading_screen[0]:
@@ -99,14 +98,13 @@ class Map(object):
         self.tileset = TerrainTileSet(self.tileset_id)
 
     # tile image related methods
-    
+
     def get_tile_image(self, tile):
         return self.tileset.get_tile(tile)
-    
+
     def get_map_tile(self, (x, y)):
 
         if (x, y) in self.wall_image_dict.keys():
-
             return self.wall_image_dict[(x, y)]
 
         return self.tile_dict[self.map[x][y]]
@@ -121,14 +119,14 @@ class Map(object):
 
     def find_wall_image(self, (x, y)):
 
-        if self.point_is_on_map((x, y+1)):
-            if self.map[x][y+1] in ('floor', 'corridor'):
+        if self.point_is_on_map((x, y + 1)):
+            if self.map[x][y + 1] in ('floor', 'corridor'):
                 return 'hor_wall'
-            elif self.map[x][y+1] == 'filled':
+            elif self.map[x][y + 1] == 'filled':
                 return 'hor_filled'
             else:
                 return 'ver_wall'
-        elif not self.point_is_on_map((x, y+1)):
+        elif not self.point_is_on_map((x, y + 1)):
             return 'hor_filled'
 
     def point_is_on_map(self, (x, y)):
@@ -172,7 +170,6 @@ class Map(object):
 
                 # draw permanent terrain features
                 if self.feature_map and (x, y) in self.feature_map.terrain_tile_features.keys():
-
                     t = self.feature_map.terrain_tile_features[(x, y)]
                     tile = self.get_tile_image(t)
                     tile.position((x_pos, y_pos))
@@ -255,7 +252,6 @@ class Map(object):
                     id = t
 
                     if id in Map.tile_to_list_key.keys():
-
                         id = Map.tile_to_list_key[id]
 
                     if id is not None:
@@ -269,21 +265,21 @@ class Map(object):
 
         dict = {}
         tiles = []
-        if self.point_is_on_map((x, y-1)):
-            dict['n'] = self.map[x][y-1]
-            dict['n_coord'] = (x, y-1)
+        if self.point_is_on_map((x, y - 1)):
+            dict['n'] = self.map[x][y - 1]
+            dict['n_coord'] = (x, y - 1)
             tiles.append('n')
         if self.point_is_on_map((x, y + 1)):
             dict['s'] = self.map[x][y + 1]
-            dict['s_coord'] = (x, y+1)
+            dict['s_coord'] = (x, y + 1)
             tiles.append('s')
-        if self.point_is_on_map((x+1, y)):
-            dict['e'] = self.map[x+1][y]
-            dict['e_coord'] = (x+1, y)
+        if self.point_is_on_map((x + 1, y)):
+            dict['e'] = self.map[x + 1][y]
+            dict['e_coord'] = (x + 1, y)
             tiles.append('e')
-        if self.point_is_on_map((x-1, y)):
-            dict['w'] = self.map[x-1][y]
-            dict['w_coord'] = (x-1, y)
+        if self.point_is_on_map((x - 1, y)):
+            dict['w'] = self.map[x - 1][y]
+            dict['w_coord'] = (x - 1, y)
             tiles.append('w')
         if diag:
             if self.point_is_on_map((x + 1, y - 1)):
@@ -323,11 +319,13 @@ class Map(object):
 
         pass
 
+<<<<<<< HEAD
         
+=======
+>>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
     # loading bar
     def clear_screen(self):
         if self.bar.on:
-
             self.screen.fill(BLACK)
             pygame.display.update()
 
@@ -376,11 +374,48 @@ class Map(object):
         
         self.add_tile(change_point, blank_tile)    
 
+    # clean up methods
+    # remove diagonal only connections
+    def remove_diagonals(self, blank_tile, check_tile):
+
+        for y in range(self.ylim - 1):
+            for x in range(self.xlim - 1):
+                self.check_quad((x, y), blank_tile, check_tile)
+
+    def check_quad(self, (x, y), blank_tile, check_tile):
+
+        points = (
+            ((x, y), (x + 1, y)),
+            ((x, y + 1), (x + 1, y + 1))
+        )
+        states = [[0, 0],
+                  [0, 0]
+                  ]
+        for py in range(2):
+            for px in range(2):
+                fx, fy = points[px][py]
+                if self.map[fx][fy] == check_tile:
+                    states[px][py] = 1
+
+        if states[0][0] == states[1][1] and states[0][1] == states[1][0] and states[0][0] != states[0][1]:
+            self.fix_quad(points, states, blank_tile)
+
+    def fix_quad(self, points, states, blank_tile):
+
+        if states[0][0] == 1:
+            walls = ((0, 0), (1, 1))
+        else:
+            walls = ((0, 1), (1, 0))
+
+        x, y = walls[randint(0, 1)]
+        change_point = points[x][y]
+
+        self.add_tile(change_point, blank_tile)
+        # print 'added %s at %s' % (blank_tile, str(change_point))
+
 
 class LoadingBar(object):
-
     def __init__(self, on, screen):
-
         self.on = on
 
         self.screen = screen
@@ -388,8 +423,8 @@ class LoadingBar(object):
         self.w = TILEWIDTH * 10
         self.h = TILEHEIGHT
 
-        self.x = SCREENWIDTH/2 - self.w/2
-        self.y = SCREENHEIGHT/2 - self.h/2
+        self.x = SCREENWIDTH / 2 - self.w / 2
+        self.y = SCREENHEIGHT / 2 - self.h / 2
 
         self.font_drawer = fd.FontDrawer()
         self.font_y = self.y + scale(20)
@@ -400,7 +435,6 @@ class LoadingBar(object):
         self.bar_image = self.bar_image.convert()
 
     def draw(self, percent, message='loading'):
-
         self.bar_image.fill(GREY)
         w = int(self.w * percent)
         rect = pygame.Rect((0, 0), (w, self.h))
@@ -409,7 +443,7 @@ class LoadingBar(object):
         self.screen.blit(self.bar_image, self.bar_rect)
 
         fi, fr = self.font_drawer.write(message, WHITE)
-        x = SCREENWIDTH/2 - fr.w/2
+        x = SCREENWIDTH / 2 - fr.w / 2
         fr.topleft = (x, self.font_y)
 
         self.screen.blit(fi, fr)
