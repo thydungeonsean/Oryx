@@ -2,7 +2,7 @@
 map.txt
 
 # project files
-/.idea/*
+.idea/
 
 # demos
-/demo files/*
+demo files/
