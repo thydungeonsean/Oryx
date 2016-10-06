@@ -1,2 +1,8 @@
 # map file
 map.txt
+
+# project files
+/.idea/*
+
+# demos
+/demo files/*

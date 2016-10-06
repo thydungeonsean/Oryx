@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e402858-6a04-4380-80e1-d0adff230eab" name="Default" comment="testing pycharm git integration">
+    <list default="true" id="2e402858-6a04-4380-80e1-d0adff230eab" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cave_map.py" afterPath="$PROJECT_DIR$/cave_map.py" />
@@ -10,6 +11,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map.txt" afterPath="$PROJECT_DIR$/map.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/world_map.py" afterPath="$PROJECT_DIR$/world_map.py" />
 >>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map.txt" afterPath="$PROJECT_DIR$/map.txt" />
+>>>>>>> 0d52a098aff3f6eed09e0692b13fabd5ec1017f3
     </list>
     <ignored path="Oryx.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,10 +37,14 @@
         <entry file="file://$PROJECT_DIR$/continent.py">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="67">
               <caret line="448" column="30" selection-start-line="448" selection-start-column="30" selection-end-line="448" selection-end-column="30" />
 =======
             <state relative-caret-position="1139">
+=======
+            <state relative-caret-position="1122">
+>>>>>>> 0d52a098aff3f6eed09e0692b13fabd5ec1017f3
               <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
 >>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
               <folding>
@@ -46,9 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="map.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/map.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="2108">
               <caret line="140" column="23" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
@@ -59,6 +68,30 @@
 =======
             <state relative-caret-position="407">
               <caret line="366" column="35" selection-start-line="366" selection-start-column="35" selection-end-line="366" selection-end-column="35" />
+=======
+            <state relative-caret-position="2737">
+              <caret line="167" column="37" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="namegen.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/namegen.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/projects/Oryx/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+>>>>>>> 0d52a098aff3f6eed09e0692b13fabd5ec1017f3
               <folding />
 >>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
             </state>
@@ -69,13 +102,19 @@
         <entry file="file://$PROJECT_DIR$/world_map.py">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="1122">
               <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
 =======
             <state relative-caret-position="458">
               <caret line="434" column="39" selection-start-line="434" selection-start-column="39" selection-end-line="434" selection-end-column="39" />
 >>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
+=======
+            <state relative-caret-position="153">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+>>>>>>> 0d52a098aff3f6eed09e0692b13fabd5ec1017f3
               <folding>
+                <element signature="e#0#19#0" expanded="true" />
                 <element signature="e#2119#2197#0" expanded="false" />
                 <element signature="e#12112#12990#0" expanded="false" />
               </folding>
@@ -111,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/village_map.py" />
         <option value="$PROJECT_DIR$/decorator_map.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/tilesheet.py" />
@@ -160,8 +198,9 @@
         <option value="$PROJECT_DIR$/map_demo.py" />
         <option value="$PROJECT_DIR$/continent.py" />
         <option value="$PROJECT_DIR$/cave_map.py" />
-        <option value="$PROJECT_DIR$/world_map.py" />
         <option value="$PROJECT_DIR$/map.py" />
+        <option value="$PROJECT_DIR$/namegen.py" />
+        <option value="$PROJECT_DIR$/world_map.py" />
       </list>
     </option>
   </component>
@@ -200,14 +239,14 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/map.py" />
+    <property name="last_opened_file_path" value="$USER_HOME$/projects/Oryx/.gitignore" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Sean\projects\Oryx" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.map_demo">
+  <component name="RunManager" selected="Python.namegen">
     <configuration default="false" name="map_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -221,23 +260,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Oryx" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/map_demo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="move_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Oryx" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/move_demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -289,6 +311,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Oryx" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="namegen" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Oryx" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/namegen.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -429,18 +468,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.map_demo" />
-      <item index="1" class="java.lang.String" itemvalue="Python.move_demo" />
-      <item index="2" class="java.lang.String" itemvalue="Python.s_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.avatar_demo" />
-      <item index="4" class="java.lang.String" itemvalue="Python.main" />
+      <item index="1" class="java.lang.String" itemvalue="Python.s_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.avatar_demo" />
+      <item index="3" class="java.lang.String" itemvalue="Python.main" />
+      <item index="4" class="java.lang.String" itemvalue="Python.namegen" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.map_demo" />
-        <item index="1" class="java.lang.String" itemvalue="Python.avatar_demo" />
+        <item index="0" class="java.lang.String" itemvalue="Python.namegen" />
+        <item index="1" class="java.lang.String" itemvalue="Python.map_demo" />
         <item index="2" class="java.lang.String" itemvalue="Python.main" />
-        <item index="3" class="java.lang.String" itemvalue="Python.s_test" />
-        <item index="4" class="java.lang.String" itemvalue="Python.move_demo" />
+        <item index="3" class="java.lang.String" itemvalue="Python.avatar_demo" />
+        <item index="4" class="java.lang.String" itemvalue="Python.s_test" />
       </list>
     </recent_temporary>
   </component>
@@ -481,7 +520,21 @@
       <updated>1475188858832</updated>
 >>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="world map removes diagonal only connections between continents and updates the lists of points to reflect the removed points">
+      <created>1475191787628</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1475191787628</updated>
+    </task>
+    <task id="LOCAL-00004" summary="adding name generator">
+      <created>1475496098070</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1475496098070</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -494,9 +547,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="36" y="16" width="1097" height="600" />
 >>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
+=======
+>>>>>>> 0d52a098aff3f6eed09e0692b13fabd5ec1017f3
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -504,7 +560,11 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="65" y="120" width="1097" height="600" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="491" y="305" width="732" height="407" />
+>>>>>>> 0d52a098aff3f6eed09e0692b13fabd5ec1017f3
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32810047" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -525,7 +585,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working on world map" />
     <MESSAGE value="testing pycharm git integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing pycharm git integration" />
+    <MESSAGE value="world map removes diagonal only connections between continents and updates the lists of points to reflect the removed points" />
+    <MESSAGE value="adding name generator" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding name generator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -544,19 +606,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="57" />
+      <option name="time" value="58" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="937" column="0" selection-start-line="937" selection-start-column="0" selection-end-line="937" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tileset_demo.py" />
     <entry file="file://$PROJECT_DIR$/tilesheet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -911,17 +965,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="313" column="0" selection-start-line="313" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/continent.py">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="2108">
           <caret line="140" column="23" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
 =======
         <state relative-caret-position="1139">
+=======
+        <state relative-caret-position="1122">
+>>>>>>> 0d52a098aff3f6eed09e0692b13fabd5ec1017f3
           <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
 >>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
           <folding>
@@ -930,8 +987,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2737">
+          <caret line="167" column="37" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/world_map.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="67">
           <caret line="448" column="30" selection-start-line="448" selection-start-column="30" selection-end-line="448" selection-end-column="30" />
@@ -939,17 +1005,30 @@
         <state relative-caret-position="458">
           <caret line="434" column="39" selection-start-line="434" selection-start-column="39" selection-end-line="434" selection-end-column="39" />
 >>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
+=======
+        <state relative-caret-position="153">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+>>>>>>> 0d52a098aff3f6eed09e0692b13fabd5ec1017f3
           <folding>
+            <element signature="e#0#19#0" expanded="true" />
             <element signature="e#2119#2197#0" expanded="false" />
             <element signature="e#12112#12990#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map.py">
+    <entry file="file://$PROJECT_DIR$/namegen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="366" column="35" selection-start-line="366" selection-start-column="35" selection-end-line="366" selection-end-column="35" />
+        <state relative-caret-position="340">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/projects/Oryx/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
           <folding />
         </state>
       </provider>
