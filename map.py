@@ -8,6 +8,7 @@ import common_tiles as ct
 
 
 class Map(object):
+
     tiles_dir = {
         'dungeon': ('floor', 'corridor', 'door', 'wall', 'fixed_wall', 'filled', 'feature'),
         'rural': ('floor', 'door', 'wall', 'fixed_wall', 'ground', 'road', 'field', 'tree', 'feature'),
