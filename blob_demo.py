@@ -86,7 +86,7 @@ class Blob(object):
 
 def draw_blob(blob):
     
-    s = pygame.display.set_mode((blob.w*5, blob.h*5))
+    pygame.display.set_mode((blob.w*5, blob.h*5))
     
     for y in range(blob.h):
         for x in range(blob.w):
@@ -126,7 +126,7 @@ def main():
 
     pygame.init()
 
-    b = Blob(15, 15, .01, .6)
+    b = Blob(20, 20, .01, .7)
     print Blob.passes
     
     draw_blob(b)
