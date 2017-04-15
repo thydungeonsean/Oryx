@@ -1,8 +1,8 @@
-import image as img
-import avatar_gen as ag
-from constants import *
+import source.graphics.image as img
+import source.graphics.avatar_gen as ag
+from source.constants import *
 from actor import Actor
-from avatar_gen import AvatarGen
+from source.graphics.avatar_gen import AvatarGen
 import stat_component
 
 

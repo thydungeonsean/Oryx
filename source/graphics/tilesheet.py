@@ -1,11 +1,16 @@
 import pygame
 from ..constants import *
+import os
+
+import_path = ''.join((os.path.dirname(__file__), '\\..\\..\\assets\\'))
 
 
 # gets an image off of a tilesheet using the tilesheet_key dictionary
 def get_tile_image(tileset, tileset_key, key):
-    
-    tile_sheet = pygame.image.load('assets/tiles/%s.png' % tileset)
+
+    img_path = ''.join((import_path, 'tiles\\', tileset, '.png'))
+
+    tile_sheet = pygame.image.load(img_path)
     tsr = tile_sheet.get_rect()
     
     point = tileset_key[key]
@@ -30,8 +35,9 @@ def set_offset(rect, (px, py)):
 
 # returns a dictionary of tile names and offset coords for a tilesheet image
 def get_tilesheet_key(file):
-    
-    f = open('assets/tiles/keys/%s.txt' % file, 'r')
+
+    key_path = ''.join((import_path, 'tiles\\keys\\', file, '.txt'))
+    f = open(key_path, 'r')
     
     tilesheet_key = {}
 

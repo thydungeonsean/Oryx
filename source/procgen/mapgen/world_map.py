@@ -1,11 +1,11 @@
 from map import Map
 from decoration_map import DecorationMap
 import cellular_automaton as ca
-import tileset as ts
+import source.graphics.tileset as ts
 from random import *
-from constants import *
+from source.constants import *
 import pygame
-import common_tiles as ct
+import source.graphics.common_tiles as ct
 from spine import Spine
 from continent import Continent
 
@@ -436,20 +436,18 @@ class WorldMap(Map):
 # =======
 
         # reset the tile lists of continents after diagonals removed
-        for continent in self.continents.values():
+         for continent in self.continents.values():
             for x, y in continent.points:
                 if self.map[x][y] != 'ground':
                     continent.points.remove((x, y))
                     continent.size -= 1
 
-        for island in self.islands.values():
+         for island in self.islands.values():
             for x, y in island['points']:
                 if self.map[x][y] != 'ground':
                     island['points'].remove((x, y))
                     island['size'] -= 1
 
-
->>>>>>> 4cb2960ec17955fc7f71d0780445f2bfa927a14b
     def add_forest(self):
 
         forest = get_forest((self.xlim, self.ylim), self.forest_seed)

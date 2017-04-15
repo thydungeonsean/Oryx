@@ -1,11 +1,13 @@
 from ..constants import *
 import image as img
+import os
 
+import_path = ''.join((os.path.dirname(__file__), '\\..\\..\\assets\\'))
 
 # terrain tileset
 def get_terrain_tileset(file):
 
-    f = open('assets/tiles/tilesets/%s.tls' % file, 'r')
+    f = open(''.join((import_path, 'tiles\\tilesets\\', file, '.tls')), 'r')
 
     colorkeys = {}
     attribkeys = {}
@@ -115,7 +117,7 @@ def unpack_tileset(color_dict, tile_keys, attribs):
 # object tileset
 def get_object_tileset(file):
 
-    f = open('assets/tiles/tilesets/%s.tls' % file, 'r')
+    f = open(''.join((import_path, 'tiles\\tilesets\\', file, '.tls')), 'r')
 
     sheet_id = None
     tileset = {}
@@ -139,7 +141,7 @@ def get_object_tileset(file):
 
 
 def get_tile_keys(set):
-    f = open('assets/tiles/tilesets/%s.tls' % set, 'r')
+    f = open(''.join((import_path, 'tiles\\tilesets\\', set, '.tls')), 'r')
 
     keys = []
 

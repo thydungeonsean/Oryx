@@ -1,4 +1,4 @@
-SCALE = 1
+SCALE = 2
 
 
 def scale(arg):

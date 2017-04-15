@@ -1,6 +1,7 @@
 from actor import Monster
 import stat_component
 from ...constants import *
+import os
 
 
 class MonsterGenerator(object):
@@ -88,11 +89,9 @@ class MonsterGenerator(object):
         
     def get_monster_data(self, monster_list, name):
         
-        try:
-            f = open('data/monsters/%s.mon' % monster_list, 'r')
-        except IOError:
-            print 'Invalid monster set.'
-            return False
+        import_path = ''.join((os.path.dirname(__file__), '\\..\\..\\..\\data\\'))
+        f = open(''.join((import_path, 'monsters\\', monster_list, '.mon')), 'r')
+
             
         monster_data_lines = []
         found = False

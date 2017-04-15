@@ -1,10 +1,10 @@
 import pygame
 import sys, os
 from pygame.locals import *
-from constants import *
+from source.constants import *
 
-import tileset as ts
-import font_draw as fd
+import source.graphics.tileset as ts
+import source.graphics.font_draw as fd
 
 
 class Gallery(object):

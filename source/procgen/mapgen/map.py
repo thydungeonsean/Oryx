@@ -4,7 +4,7 @@ from ...constants import *
 from ...graphics import font_draw as fd
 
 from ...graphics.tileset import TerrainTileSet
-from ...graphics.common_tiles import common_tiles as ct
+import source.graphics.common_tiles as ct
 
 
 class Map(object):
@@ -339,7 +339,7 @@ class Map(object):
         for y in range(self.ylim-1):
             for x in range(self.xlim-1):
                 
-                self.check_quad((x, y))
+                self.check_quad((x, y), blank_tile, check_tile)
                 
     def check_quad(self, (x, y), blank_tile, check_tile):
         

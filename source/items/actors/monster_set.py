@@ -1,6 +1,7 @@
 from random import *
 import monster_generator as mg
 from ...graphics import fov_map as fov
+import os
 
 
 class MonsterSet(object):
@@ -40,11 +41,9 @@ class MonsterSet(object):
 
     def get_monster_types(self):
 
-        try:
-            f = open('data/packs/%s.mpack' % self.pack, 'r')
-        except IOError:
-            print 'file not found'
-            return
+        import_path = ''.join((os.path.dirname(__file__), '\\..\\..\\..\\data\\'))
+        f = open(''.join((import_path, 'packs\\', self.pack, '.mpack')), 'r')
+
 
         types = {
             'skirmish': [],
